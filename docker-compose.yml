@@ -16,19 +16,19 @@ services:
       --config /freqtrade/user_data/config.json
       --strategy HPStrategyTF
 
-  freqtrade_bt:
-    image: freqtradeorg/freqtrade:develop
-    restart: unless-stopped
-    container_name: freqtrade_bt
-    volumes:
-      - "./user_data:/freqtrade/user_data"
-      - "/etc/localtime:/etc/localtime:ro"
-    ports:
-      - "8081:8080"
-    command: >
-      webserver
-      --logfile /freqtrade/user_data/logs/freqtrade_bt.log
-      --config /freqtrade/user_data/config.json
+  #freqtrade_bt:
+  #  image: freqtradeorg/freqtrade:develop
+  #  restart: unless-stopped
+  #  container_name: freqtrade_bt
+  #  volumes:
+  #    - "./user_data:/freqtrade/user_data"
+  #    - "/etc/localtime:/etc/localtime:ro"
+  #  ports:
+  #    - "8081:8080"
+  #  command: >
+  #    webserver
+  #    --logfile /freqtrade/user_data/logs/freqtrade_bt.log
+  #    --config /freqtrade/user_data/config.json
 
   proxy:
     image: mikekonan/exchange-proxy:latest-amd64
