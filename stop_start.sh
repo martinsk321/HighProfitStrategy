@@ -16,4 +16,4 @@ chmod 777 -R user_data
 docker-compose down
 docker-compose up -d
 #sh ./download_data_backtest.sh
-docker-compose logs -f
+#docker-compose logs -f
